@@ -26,5 +26,12 @@ namespace Lambda_Programs
                 Console.WriteLine("Name : " + person.Name + "   Age: " + person.Age);
             }
         }
+        public void CheckingForTeenagePerson(List<Persons> listPersonsInCity)
+        {
+            if (listPersonsInCity.Any(e => (e.Age >= 13 && e.Age <= 19)))
+            {
+                Console.WriteLine("Yes we have some teenagers in the list");
+            }
+        }
     }
 }
