@@ -33,5 +33,10 @@ namespace Lambda_Programs
                 Console.WriteLine("Yes we have some teenagers in the list");
             }
         }
+        public void AverageAge_OfPersons(List<Persons> listPersonsInCity)
+        {
+            double averageAge = listPersonsInCity.Average(e => e.Age);
+            Console.WriteLine("The Average age of all Persons : " + averageAge);
+        }
     }
 }
