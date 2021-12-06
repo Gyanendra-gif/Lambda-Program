@@ -11,6 +11,7 @@ namespace Lambda_Programs
             Operation operation = new Operation();
             List<Persons> listPersonsInCity = new List<Persons>();
             operation.AddRecords(listPersonsInCity);
+            operation.Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(listPersonsInCity);
         }
     }
 }

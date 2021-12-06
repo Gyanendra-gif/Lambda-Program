@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Lambda_Programs
@@ -17,6 +18,13 @@ namespace Lambda_Programs
             listPersonsInCity.Add(new Persons("203456882", "Winston", "1208 Main Street, Newyork NY", 65));
             listPersonsInCity.Add(new Persons("203456883", "Mac", "126 Main Street, Newyork NY", 85));
             listPersonsInCity.Add(new Persons("203456884", "Mac", "126 Provience Ave Street, Newyork NY", 95));
+        }
+        public  void Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(List<Persons> listPersonsInCity)
+        {
+            foreach (Persons person in listPersonsInCity.FindAll(e => (e.Age >= 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name : " + person.Name + "   Age: " + person.Age);
+            }
         }
     }
 }
