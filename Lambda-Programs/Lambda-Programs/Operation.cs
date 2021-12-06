@@ -38,5 +38,14 @@ namespace Lambda_Programs
             double averageAge = listPersonsInCity.Average(e => e.Age);
             Console.WriteLine("The Average age of all Persons : " + averageAge);
         }
+        public void CheckingFor_ParticularName(List<Persons> listPersonsInCity)
+        {
+            Console.WriteLine("Enter the Name to check in the list :");
+            string name = Console.ReadLine();
+            if (listPersonsInCity.Exists(e => e.Name == name))
+                Console.WriteLine("The Name {0} is Present in the list", name);            
+            else            
+                Console.WriteLine("The Name {0} is not Present in the list", name);            
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Lambda_Programs
             operation.Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(listPersonsInCity);
             operation.CheckingForTeenagePerson(listPersonsInCity);
             operation.AverageAge_OfPersons(listPersonsInCity);
+            operation.CheckingFor_ParticularName(listPersonsInCity);
         }
     }
 }
