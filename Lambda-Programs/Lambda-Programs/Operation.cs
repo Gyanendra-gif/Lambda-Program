@@ -59,5 +59,18 @@ namespace Lambda_Programs
                 Console.WriteLine(person.Age);
             }
         }
+        public void Remove_SpecificName(List<Persons> listPersonsInCity) 
+        {
+            Console.WriteLine("Enter the Specific Name to Remove from the list :");
+            string name = Console.ReadLine();
+            foreach (Persons person in listPersonsInCity.FindAll(e => (e.Name == name)))
+            {
+                listPersonsInCity.Remove(person);
+            }
+            foreach (Persons person in listPersonsInCity)
+            {
+                Console.WriteLine(person.Name);
+            }
+        }
     }
 }

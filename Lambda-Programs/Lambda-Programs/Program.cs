@@ -16,6 +16,7 @@ namespace Lambda_Programs
             operation.AverageAge_OfPersons(listPersonsInCity);
             operation.CheckingFor_ParticularName(listPersonsInCity);
             operation.Skip_Record(listPersonsInCity);
+            operation.Remove_SpecificName(listPersonsInCity);
         }
      }
 }
