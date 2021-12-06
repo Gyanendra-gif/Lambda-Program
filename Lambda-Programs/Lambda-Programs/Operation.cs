@@ -19,7 +19,7 @@ namespace Lambda_Programs
             listPersonsInCity.Add(new Persons("203456883", "Mac", "126 Main Street, Newyork NY", 85));
             listPersonsInCity.Add(new Persons("203456884", "Mac", "126 Provience Ave Street, Newyork NY", 95));
         }
-        public  void Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(List<Persons> listPersonsInCity)
+        public void Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(List<Persons> listPersonsInCity)
         {
             foreach (Persons person in listPersonsInCity.FindAll(e => (e.Age >= 60)).Take(2).ToList())
             {
@@ -43,9 +43,21 @@ namespace Lambda_Programs
             Console.WriteLine("Enter the Name to check in the list :");
             string name = Console.ReadLine();
             if (listPersonsInCity.Exists(e => e.Name == name))
-                Console.WriteLine("The Name {0} is Present in the list", name);            
-            else            
-                Console.WriteLine("The Name {0} is not Present in the list", name);            
+                Console.WriteLine("The Name {0} is Present in the list", name);
+            else
+                Console.WriteLine("The Name {0} is not Present in the list", name);
+        }
+        public void Skip_Record(List<Persons> listPersonsInCity)
+        {
+            int size = listPersonsInCity.Count();
+            foreach (Persons person in listPersonsInCity.FindAll(e => (e.Age < 60)).Take(size).ToList())
+            { 
+                listPersonsInCity.Remove(person);
+            }
+            foreach (Persons person in listPersonsInCity)
+            {
+                Console.WriteLine(person.Age);
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Lambda_Programs
 {
      class Program
-    {
+     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Management Program Using Lambda");
@@ -15,6 +15,7 @@ namespace Lambda_Programs
             operation.CheckingForTeenagePerson(listPersonsInCity);
             operation.AverageAge_OfPersons(listPersonsInCity);
             operation.CheckingFor_ParticularName(listPersonsInCity);
+            operation.Skip_Record(listPersonsInCity);
         }
-    }
+     }
 }
