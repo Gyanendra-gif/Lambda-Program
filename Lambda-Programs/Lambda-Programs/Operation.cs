@@ -43,14 +43,14 @@ namespace Lambda_Programs
             Console.WriteLine("Enter the Name to check in the list :");
             string name = Console.ReadLine();
             if (listPersonsInCity.Exists(e => e.Name == name))
-                Console.WriteLine("The Name {0} is Present in the list", name);
+                Console.WriteLine("The Name {0} is Present in the list"+  name);
             else
                 Console.WriteLine("The Name {0} is not Present in the list", name);
         }
         public void Skip_Record(List<Persons> listPersonsInCity)
         {
             int size = listPersonsInCity.Count();
-            foreach (Persons person in listPersonsInCity.FindAll(e => (e.Age < 60)).Take(size).ToList())
+            foreach (Persons person in listPersonsInCity.Where(e => (e.Age < 60)).ToList())
             { 
                 listPersonsInCity.Remove(person);
             }
